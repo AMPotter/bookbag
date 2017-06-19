@@ -2,6 +2,7 @@
     max-width: 960px;
     padding: 20px;
     margin: 0 auto;
+    background: #fff;
 }
 header {
     display: table;
@@ -25,14 +26,15 @@ h1 {
     vertical-align: top;
 }
 main {
-    margin: 10em 0;
+    margin: 8em 0;
 }
+#main-question {clear: both;}
 #book-icon {
     width: 72px;
-    display: inline-block;
+    float: left;
     margin-right: 15px;
 }
 h2 {
     font-size: 4em;
-    display: inline-block;
+    line-height: 1.2;
 }
