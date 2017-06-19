@@ -19,6 +19,7 @@
   "homepage": "https://github.com/john-grillo/bookbag#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "pg": "^6.3.0"
   }
