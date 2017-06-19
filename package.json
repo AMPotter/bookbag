@@ -1,0 +1,25 @@
+{
+  "name": "bookbag",
+  "version": "1.0.0",
+  "description": "Böokbag is a simple app. You tell it what you're reading and it gives you two similar books for you to enjoy.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-grillo/bookbag.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-grillo/bookbag/issues"
+  },
+  "homepage": "https://github.com/john-grillo/bookbag#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "pg": "^6.3.0"
+  }
+}
