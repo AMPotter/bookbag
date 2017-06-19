@@ -1,0 +1,49 @@
+#wrapper {
+    max-width: 960px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #fff;
+}
+header {
+    display: table;
+    width: 100%;
+}
+#header-left {
+    display: table-cell;
+    width: calc(100% - 60px);
+    vertical-align: top;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+#tagline {
+    text-transform: uppercase;
+}
+#header-right {
+    display: table-cell;
+    width: 60px;
+    vertical-align: top;
+}
+main {
+    margin: 8em 0;
+}
+#main-question {clear: both;}
+#book-icon {
+    width: 72px;
+    float: left;
+    margin-right: 15px;
+}
+h2 {
+    font-size: 4em;
+    line-height: 1.2;
+}
+
+input {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+button {
+    font-size: 1.5em;
+}
