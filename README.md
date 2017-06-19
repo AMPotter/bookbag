@@ -21,6 +21,10 @@ Böokbag is a simple app. You tell it what you're reading and it gives you two s
 ..* Filter out title & author for similar works. No repeats.
 4. (RESULTS PAGE)...With a picture of the book, author name as well as the ISBN.
 5. Include our names & links to github profiles in the footer of the website.
+6. Database for 'bookbag' feature. If user likes the book, we can store it in a database.
+..* Store in SQL database. Columns are: Title, Author, ISBN.
+..* This counts as an interaction that we can store.
+..* Label ideas: 'Bag it!'; heart-button; 'Add'; 'Add to bag';
 
 ### SKETCHES:
 See meatspace paper.
@@ -34,4 +38,5 @@ See meatspace paper.
 2. Differentiate a review from Guy Average/Rando Calrissian and have a professional reviewer make their selection
 3. RESULTS PAGE: Include a review blurb
 4. RESULTS PAGE: Include a purchase link to the relevant book
-5. SUPER STRETCH: Reference local libraries for the book as well.
+5. Include a 'category' column in our back-end SQL database.
+6. SUPER STRETCH: Reference local libraries for the book as well.
