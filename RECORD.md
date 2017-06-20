@@ -21,9 +21,22 @@ I hope that we can use a combination of the TasteDive [TD] call and Google API [
   Amy has been an invaluable help. A shame she won't be available until Wednesday. But at least that we have a written diagram and a clear plan of attack for tomorrow. 
 
 ##Day 2, June 20th Progress:
+###Morning:
+ The very first thing we decided to do this morning was mob server.js for the idea of everything we could need. We focused on server.js and using lab14 as a general guide.
+ Around 10 am, Will came by to help us out. He told us to cut down on the amount of code we were doing and just focus on very static methods. For some reason, even our simplest, hard-coded response is ging us "Unexexpted: <" from Postman. We should be getting back Jack London's _Call of the Wild_.
 
-##Day 3, June 21th Progress:
+ For 20 minutes, we tried poking around the TD server and got HTML only. Then Will suggested we try poking at Github using the code from lab14 in an effort to . At 10:37, we got a positive response to the github API by putting a / at the end of `api.github.com/users/results/`. So the issue seems to be the exact nature of the request isn't something wrong with express, but with the exact nature of the string being passed to the TasteDive API.
+
+  We created a SuperAgent for node. documentation: https://www.npmjs.com/package/superagent
+   It's a super API that allows us to make an AJAX call much easier. npm i superagent and we made it a requirement CONST in our server.js file.  Also, Andrew Potter is a good driver. Will++ for helping us out so much. Sarah Joy said that several other people have had the same problem as well.
+  We fixed this problem by 11 am. 
+ 
+ ###Afternoon:
+   Now is the appropriate time to panic.
+
+##Day 4, June 22th Progress:
 HOORAY! AMY IS BACK!
+
 
 ##Day 4, June 22th Progress:
 

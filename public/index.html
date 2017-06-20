@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script id="results-template" type="text/x-handlebars-template">
+     <div class="results-div"> 
+
+     </div>
+     <div class="results-div"> 
+         
+     </div>
+    </script>
 </head>
 
 <body>
@@ -26,15 +34,19 @@
             <!-- #header-right -->
         </header>
         <main>
-            <div id="main-question">
-                <img src="img/open-book.png" alt="placeholder book icon" id="book-icon">
-                <h2>What are you reading?</h2>
-            </div>
-            <!-- #main-question -->
-            <form>
-                <input type="text" placeholder="search by book title">
-                <button>Get recommendations</button>
-            </form>
+            <section class='tab-content'>
+                <div id="main-question">
+                    <img src="img/open-book.png" alt="placeholder book icon" id="book-icon">
+                    <h2>What are you reading?</h2>
+                </div>
+                <!-- #main-question -->
+                <form>
+                    <input type="text" placeholder="search by book title">
+                    <button>Get recommendations</button>
+                </form>
+
+                <!-- end of .tabcontent-->
+            </section>
         </main>
 
         <footer>
@@ -42,6 +54,9 @@
         </footer>
     </div>
     <!-- #wrapper -->
+    <script src="vendor/scripts/jquery-3.2.1.min.js"></script>
+    <script src="vendor/scripts/handlebars-v4.0.10.js"></script>
+    <script src="scripts/resultsView.js"></script>
 </body>
 
 </html>
