@@ -8,7 +8,7 @@ var app = app || {};
     Result.all = [];
 
     Result.fetchAll = callback => {
-        $.get('/results')
+        $.get('/api/results')
             .then(
             data => {
                 Result.loadAll(data);

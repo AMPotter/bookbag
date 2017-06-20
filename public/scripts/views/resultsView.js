@@ -10,10 +10,10 @@ var app = app || {};
 
         //end of const render    
     }
-    resultsView.index = function (results) {
+    resultsView.index = function () {
         $('#results').show().siblings().hide();
         $('#results article').remove();
-        results.forEach(a => $('#results').append(render(a)));
+        app.Result.all.forEach(a => $('#results').append(render(a)));
     }
 
     module.resultsView = resultsView;

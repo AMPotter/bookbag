@@ -3,6 +3,9 @@ var app = app || {};
 
 (function(module){
     const resultsController = {};
-    resultsController.index = (ctx) => app.resultsView.index(ctx.results);
+    resultsController.index = () => {
+        app.Result.fetchAll(app.resultsView.index);
+    }
 
+    module.resultsController = resultsController;
 })(app);
