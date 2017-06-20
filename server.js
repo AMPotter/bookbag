@@ -25,7 +25,7 @@ app.use(express.static('./public'));
 //     }))(request, response);
 // }
 
-app.get('/results/*', (request, response) => {
+app.get('/results', (request, response) => {
     superAgent
         .get(`https://tastedive.com/api/similar?q=book:call+of+the+wild&k=${process.env.TASTEDIVE_TOKEN}&info=1`)
         .end((err, res) => response.send(res.text));
