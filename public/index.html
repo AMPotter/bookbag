@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="vendor/styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
-    
+    <!--<link rel="stylesheet" href="styles/modules.css">-->
+    <script id="results-template" type="text/x-handlebars-template">
+        <!-- Handlebars template-->
+        <article>
+            <div class="results-div">
+                <h2><a href="{{wUrl}}" target="_blank">{{Name}}</a></h2>
+                <p>{{wTeaser}}</p>
+            </div>
+        </article>
+    </script>
 </head>
 
 <body>
@@ -27,15 +35,21 @@
             <!-- #header-right -->
         </header>
         <main>
-            <div id="main-question">
-                <img src="img/open-book.png" alt="placeholder book icon" id="book-icon">
-                <h2>What are you reading?</h2>
-            </div>
-            <!-- #main-question -->
-            <form>
-                <input type="text" placeholder="search by book title">
-                <button>Get recommendations</button>
-            </form>
+            <section class="tab-content" id="search">
+                <div id="main-question">
+                    <img src="img/open-book.png" alt="placeholder book icon" id="book-icon">
+                    <h2>What are you reading?</h2>
+                </div>
+                <!-- #main-question -->
+                <form>
+                    <input type="text" placeholder="search by book title">
+                    <button>Get recommendations</button>
+                </form>
+
+                <!-- end of .tabcontent-->
+            </section>
+            <section class="tab-content" id="results">
+            </section>
         </main>
 
         <footer>
@@ -43,6 +57,9 @@
         </footer>
     </div>
     <!-- #wrapper -->
+    <script src="vendor/scripts/jquery-3.2.1.min.js"></script>
+    <script src="vendor/scripts/handlebars-v4.0.10.js"></script>
+    <script src="scripts/views/resultsView.js"></script>
 </body>
 
 </html>
