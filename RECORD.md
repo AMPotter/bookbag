@@ -18,9 +18,12 @@ Thankfully, we had the great Amy, a CodeFellows mentor, to come in and help us o
 I hope that we can use a combination of the TasteDive [TD] call and Google API [GAPI] to ping a book title, grab the first two results that aren't the same as the original query and then use GAPI's embed feature to load up a potential book. Or at least the first few pages.
   So yeah, we seem to be on the right track. Planning today, working on building tomorrow.
 
+  Amy has been an invaluable help. A shame she won't be available until Wednesday. But at least that we have a written diagram and a clear plan of attack for tomorrow. 
+
 ##Day 2, June 20th Progress:
 
 ##Day 3, June 21th Progress:
+HOORAY! AMY IS BACK!
 
 ##Day 4, June 22th Progress:
 

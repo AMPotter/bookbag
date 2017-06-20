@@ -41,3 +41,4 @@ See meatspace paper.
 5. Include a 'category' column in our back-end SQL database.
 6. SUPER STRETCH: Reference local libraries for the book as well.
 7. SUPER STRETCH: Use Google API to create an embed page so people could read the first few pages or whatever Google's API supports.
+8. Unclick heart icon to delete book from storage shelf.
