@@ -37,11 +37,12 @@ function loadBookbag() {
 app.post('/shelf', function(request, response) {
     client.query(
         'INSERT INTO bookbag(name, type, teaser, url) VALUES($1, $2, $3, $4) ON CONFLICT DO NOTHING',
-        []
-    )
-})
-
-
+        [request.body.name, request.body.type, request.body.teaser, request.body.url],
+        function(err) {
+            if (err) console.error(err);
+        }
+    );
+});
 
 function loadDB() {
     client.query(`
@@ -50,7 +51,7 @@ function loadDB() {
             book_id SERIAL PRIMARY KEY,
             name VARCHAR(255) UNIQUE NOT NULL,
             type VARCHAR(4),
-            teaser LONGTEXT,
+            teaser VARCHAR(99999),
             url VARCHAR(255)
         );
     `)
@@ -58,3 +59,4 @@ function loadDB() {
         .catch(console.error);
 }
 
+loadDB();
