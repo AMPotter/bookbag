@@ -3,5 +3,9 @@ var app = app || {};
 
 (function(module){
     const searchController = {};
-    searchController.index = (ctx) => app.searchView.index(ctx.results)
+    searchController.index = () => {
+        app.searchView.initPage();
+    }
+
+    module.searchController = searchController;
 })

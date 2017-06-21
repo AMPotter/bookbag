@@ -16,7 +16,7 @@
             <div class="results-div">
                 <h2><a href="{{wUrl}}" target="_blank">{{Name}}</a></h2>
                 <p>{{wTeaser}}</p>
-            </div>
+            </div> <!-- #results-div -->
         </article>
     </script>
 </head>
@@ -49,6 +49,13 @@
                 <!-- end of .tabcontent-->
             </section>
             <section class="tab-content" id="results">
+                <div id="no-results">
+                    <h2>Nothing found</h2>
+                    <p id="no-results-text"></p>
+                    <p><a href="/">Search again?</a></p>
+            </div> <!-- #no-results -->
+            </section>
+            <section class="tab-content" id="shelf">
             </section>
         </main>
 
