@@ -30,3 +30,22 @@ app.get('*', (request, response) => {
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
+function loadBookbag() {
+    
+}
+
+function loadDB() {
+    client.query(`
+        CREATE TABLE IF NOT EXISTS
+        bookbag (
+            book_id SERIAL PRIMARY KEY,
+            name VARCHAR(255) UNIQUE NOT NULL,
+            type VARCHAR(4),
+            teaser LONGTEXT,
+            url VARCHAR(255),
+            timestamp TIMESTAMP
+        );
+    `)
+        .then(loadBookbag)
+        .catch(console.error);
+}
