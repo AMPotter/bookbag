@@ -24,8 +24,8 @@
     <script id="shelf-template" type="text/x-handlebars-template">
         <article>
             <div class="shelf-div">
-                <h2><a href="{{wUrl}}" target="_blank">{{Name}}</a></h2>
-                <p>{{wTeaser}}</p>
+                <h2><a href="{{url}}" target="_blank">{{name}}</a></h2>
+                <p>{{teaser}}</p>
             </div>
         </article>
     </script>
@@ -40,7 +40,7 @@
             </div>
             <!-- #header-left -->
             <div id="header-right">
-                <img src="img/three-books.png" alt="placeholder icon for bookshelf">
+                <a href="/shelf"><img src="img/three-books.png" alt="placeholder icon for bookshelf"></a>
             </div>
             <!-- #header-right -->
         </header>
@@ -85,8 +85,10 @@
     <script src="/scripts/views/searchView.js"></script>
     <script src="/scripts/models/results.js"></script>
     <script src="/scripts/views/resultsView.js"></script>
+    <script src="/scripts/views/shelfView.js"></script>
     <script src="/scripts/controllers/searchController.js"></script>
     <script src="/scripts/controllers/resultsController.js"></script>
+    <script src="/scripts/controllers/shelfController.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
 </body>
 

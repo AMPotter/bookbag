@@ -24,12 +24,6 @@ app.get('/api/results/:titleString', (request, response) => {
         .end((err, res) => response.send(res.text));
 });
 
-app.get('*', (request, response) => {
-    response.sendFile('index.html', {root: './public'});
-});
-
-app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
-
 function loadBookbag() {
     
 }
@@ -41,6 +35,14 @@ app.post('/shelf', function(request, response) {
         function(err) {
             if (err) console.error(err);
         }
+    );
+});
+
+app.get('/data/shelf', function(request, response) {
+    client.query(
+         'SELECT * FROM bookbag', function(err, result) {
+             response.send({data: result.rows});
+         }
     );
 });
 
@@ -60,3 +62,9 @@ function loadDB() {
 }
 
 loadDB();
+
+app.get('*', (request, response) => {
+    response.sendFile('index.html', {root: './public'});
+});
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
