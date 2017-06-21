@@ -17,14 +17,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-// function proxyTasteDive(request, response) {
-//     console.log('Routing TasteDive request for ' + request.params[0]);
-//     console.log('Response: ' + response);
-//     (requestProxy({
-//         url: `https://tastedive.com/api/similar?q=book:call+of+the+wild&k=${process.env.TASTEDIVE_TOKEN}&info=1`
-//     }))(request, response);
-// }
-
 app.get('/api/results/:titleString', (request, response) => {
     console.log('request params: ' + request.params.titleString);
     superAgent

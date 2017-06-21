@@ -5,6 +5,10 @@ var app = app || {};
 (function(module) {
     const searchView = {};
 
+    searchView.initPage = function() {
+        $('#search').show().siblings().hide();
+    }
+    
     searchView.initSearch = function() {
         $('#search-form').on('submit', searchView.submit);
     };
@@ -12,7 +16,9 @@ var app = app || {};
     searchView.submit = function(event) {
         event.preventDefault();
         // replace spaces with plus signs for URL
-        const titleString = $('#search-title').val().split(' ').join('+');
+        const titleStringRaw = $('#search-title').val();
+        app.searchView.titleStringRaw = titleStringRaw;
+        const titleString = titleStringRaw.split(' ').join('+');
         console.log(titleString);
         // let searchQuery = new app.Result({
         //     Name: $('#search-title').val()

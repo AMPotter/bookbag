@@ -13,7 +13,12 @@ var app = app || {};
     resultsView.index = function () {
         $('#results').show().siblings().hide();
         $('#results article').remove();
-        app.Result.all.forEach(a => $('#results').append(render(a)));
+        if(app.Result.all.length === 0) {
+            $('#no-results').show();
+            $('#no-results-text').text('Sorry, no results for “'+app.searchView.titleStringRaw+'.”');
+        } else {
+            app.Result.all.forEach(a => $('#results').append(render(a)));
+        }
     }
 
     module.resultsView = resultsView;
