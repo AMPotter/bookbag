@@ -7,7 +7,7 @@ var app = app || {};
 
     searchView.initSearch = function() {
         $('#search-form').on('submit', searchView.submit);
-    }
+    };
 
     searchView.submit = function(event) {
         event.preventDefault();
@@ -17,8 +17,8 @@ var app = app || {};
         // let searchQuery = new app.Result({
         //     Name: $('#search-title').val()
         // });
-        //app.Result.fetchAll(app.resultsView.index);
-    }
+        app.Result.fetchAll(titleString, app.resultsView.index);
+    };
 
     searchView.initSearch();
     module.searchView = searchView;
