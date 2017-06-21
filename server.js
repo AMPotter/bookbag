@@ -25,14 +25,15 @@ app.use(express.static('./public'));
 //     }))(request, response);
 // }
 
-app.get('/api/results', (request, response) => {
+app.get('/api/results/:titleString', (request, response) => {
+    console.log('request params: ' + request.params.titleString);
     superAgent
-        .get(`https://tastedive.com/api/similar?q=book:call+of+the+wild&k=${process.env.TASTEDIVE_TOKEN}&info=1`)
+        .get(`https://tastedive.com/api/similar?q=book:${request.params.titleString}&k=${process.env.TASTEDIVE_TOKEN}&info=1`)
         .end((err, res) => response.send(res.text));
 });
 
 app.get('*', (request, response) => {
-    response.sendFile('index.html', {root: './public'})
+    response.sendFile('index.html', {root: './public'});
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
