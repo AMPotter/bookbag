@@ -34,6 +34,15 @@ function loadBookbag() {
     
 }
 
+app.post('/shelf', function(request, response) {
+    client.query(
+        'INSERT INTO bookbag(name, type, teaser, url) VALUES($1, $2, $3, $4) ON CONFLICT DO NOTHING',
+        []
+    )
+})
+
+
+
 function loadDB() {
     client.query(`
         CREATE TABLE IF NOT EXISTS
@@ -42,10 +51,10 @@ function loadDB() {
             name VARCHAR(255) UNIQUE NOT NULL,
             type VARCHAR(4),
             teaser LONGTEXT,
-            url VARCHAR(255),
-            timestamp TIMESTAMP
+            url VARCHAR(255)
         );
     `)
         .then(loadBookbag)
         .catch(console.error);
 }
+
