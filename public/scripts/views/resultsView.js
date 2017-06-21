@@ -21,6 +21,18 @@ var app = app || {};
         }
     };
 
+    resultsView.initFave = function() {
+        $('.save-fave').click(function(event) {
+            console.log('$(this).index()');
+            resultsView.submit();
+        });
+    };
+
+    resultsView.submit = function(event) {
+        console.log(event.index());
+        
+    };
+
     module.resultsView = resultsView;
     //end of first IIFE function    
 })(app);
