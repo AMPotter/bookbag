@@ -9,7 +9,7 @@ var app = app || {};
         return template(result);
 
         //end of const render    
-    }
+    };
     resultsView.index = function () {
         $('#results').show().siblings().hide();
         $('#results article').remove();
@@ -19,7 +19,7 @@ var app = app || {};
         } else {
             app.Result.all.forEach(a => $('#results').append(render(a)));
         }
-    }
+    };
 
     module.resultsView = resultsView;
     //end of first IIFE function    

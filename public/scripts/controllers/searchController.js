@@ -5,7 +5,7 @@ var app = app || {};
     const searchController = {};
     searchController.index = () => {
         app.searchView.initPage();
-    }
+    };
 
     module.searchController = searchController;
-})
+})(app);

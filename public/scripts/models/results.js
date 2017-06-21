@@ -20,7 +20,7 @@ var app = app || {};
     Result.loadAll = data => {
         // Similar.Results from TasteDive API
         const dataResults = JSON.parse(data).Similar.Results;
-        Result.all = dataResults.map(obj => new Result(obj));
+        Result.all = dataResults.filter(ele => ele.Type === 'book').map(obj => new Result(obj));
     };
     module.Result = Result;
 })(app);
