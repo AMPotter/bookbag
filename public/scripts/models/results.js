@@ -25,9 +25,9 @@ var app = app || {};
 
     Result.insertRecord = function (obj, callback) {
         console.log(obj);
-        $.post('/results', obj)
-        .then(console.log)
-        .then(callback);
+        $.post('/shelf', obj)
+            .then(console.log)
+            .then(callback);
     };
     module.Result = Result;
 })(app);
