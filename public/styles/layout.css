@@ -47,4 +47,4 @@ input {
 button {
     font-size: 1.5em;
 }
-#no-results, #no-shelf {display: none;}
+#yes-results, #no-results, #no-shelf {display: none;}

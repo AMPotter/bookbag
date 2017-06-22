@@ -15,9 +15,13 @@ var app = app || {};
         $('#results article').remove();
         if (app.Result.all.length === 0) {
             $('#no-results').show();
+            $('#yes-results').hide();
             $('#no-results-text').text('Sorry, no results for “' + app.searchView.titleStringRaw + '.”');
         } else {
-            app.Result.all.forEach(a => $('#results').append(render(a)));
+            $('#no-results').hide();
+            $('#yes-results').show();
+            $('#yes-results h2').text('Showing results for “' + app.searchView.titleStringRaw + '.”');
+            app.Result.all.forEach(a => $('#results-container').append(render(a)));
             app.resultsView.initFave();
         }
     };
@@ -25,6 +29,7 @@ var app = app || {};
     resultsView.initFave = function () {
         $('.save-fave').on('click', function (event) {
             var index = $(this).parent().parent().index() - 1;
+            
             var arrayPos = app.Result.all[index];
             var obj = {
                 name: arrayPos.Name,
@@ -32,6 +37,7 @@ var app = app || {};
                 teaser: arrayPos.wTeaser,
                 url: arrayPos.wUrl
             };
+            console.log('obj = ' + obj);
             app.Result.insertRecord(obj);
         });
     };
