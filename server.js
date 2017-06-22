@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 
 app.get('/api/results/:titleString', (request, response) => {
-    console.log('request params: ' + request.params.titleString);
     superAgent
         .get(`https://tastedive.com/api/similar?q=book:${request.params.titleString}&k=${process.env.TASTEDIVE_TOKEN}&info=1`)
         .end((err, res) => response.send(res.text));

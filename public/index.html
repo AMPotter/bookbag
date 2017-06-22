@@ -14,7 +14,7 @@
         <!-- Handlebars template-->
         <article>
             <div class="results-div">
-                <h2><a href="{{wUrl}}" target="_blank">{{Name}}</a></h2>
+                <h3><a href="{{wUrl}}" target="_blank">{{Name}}</a></h3>
                 <p>{{wTeaser}}</p>
                 <button type="submit" class="save-fave">Add to shelf</button>
             </div> <!-- #results-div -->
@@ -24,7 +24,7 @@
     <script id="shelf-template" type="text/x-handlebars-template">
         <article>
             <div class="shelf-div">
-                <h2><a href="{{url}}" target="_blank">{{name}}</a></h2>
+                <h3><a href="{{url}}" target="_blank">{{name}}</a></h3>
                 <p>{{teaser}}</p>
                 <button type="submit" class="kill-fave" data-book-id="{{book_id}}">Remove from shelf</button>
             </div>
@@ -62,15 +62,20 @@
                 <!-- end of .tabcontent-->
             </section>
             <section class="tab-content" id="results">
+                <div id="yes-results">
+                    <h2>Showing results for</h2>
+                </div>
                 <div id="no-results">
                     <h2>Nothing found</h2>
                     <p id="no-results-text"></p>
                     <p><a href="/">Search again?</a></p>
-            </div> <!-- #no-results -->
+                </div> <!-- #no-results -->
+                <div id="results-container"></div>
             </section>
             <section class="tab-content" id="shelf">
+                <h2>Books in your shelf</h2>
                 <div id="no-shelf">
-                    <h2>Nothing found</h2>
+                    <h3>Nothing found</h3>
                     <p>You haven't saved any favorites to your shelf.</p>
                     <p><a href="/">Search for favorites?</a></p>
                 </div>
