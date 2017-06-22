@@ -26,6 +26,7 @@
             <div class="shelf-div">
                 <h2><a href="{{url}}" target="_blank">{{name}}</a></h2>
                 <p>{{teaser}}</p>
+                <button type="submit" class="kill-fave" data-book-id="{{book_id}}">Remove from shelf</button>
             </div>
         </article>
     </script>
@@ -84,9 +85,9 @@
     <script src="/vendor/scripts/jquery-3.2.1.min.js"></script>
     <script src="/vendor/scripts/handlebars-v4.0.10.js"></script>
     <script src="/vendor/scripts/page.js"></script>
-    <script src="/scripts/views/searchView.js"></script>
     <script src="/scripts/models/results.js"></script>
     <script src="/scripts/models/shelf.js"></script>
+    <script src="/scripts/views/searchView.js"></script>
     <script src="/scripts/views/resultsView.js"></script>
     <script src="/scripts/views/shelfView.js"></script>
     <script src="/scripts/controllers/searchController.js"></script>

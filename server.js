@@ -14,7 +14,7 @@ client.connect();
 client.on('error', err => console.error(err));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 
 app.get('/api/results/:titleString', (request, response) => {
@@ -24,22 +24,30 @@ app.get('/api/results/:titleString', (request, response) => {
         .end((err, res) => response.send(res.text));
 });
 
-app.post('/shelf', function(request, response) {
+app.post('/shelf', function (request, response) {
     client.query(
         'INSERT INTO bookbag(name, type, teaser, url) VALUES($1, $2, $3, $4) ON CONFLICT DO NOTHING',
         [request.body.name, request.body.type, request.body.teaser, request.body.url],
-        function(err) {
+        function (err) {
             if (err) console.error(err);
         }
     );
 });
 
-app.get('/data/shelf', function(request, response) {
+app.get('/data/shelf', function (request, response) {
     client.query(
-         'SELECT * FROM bookbag', function(err, result) {
-             response.send({data: result.rows});
-         }
+        'SELECT * FROM bookbag', function (err, result) {
+            response.send({ data: result.rows });
+        }
     );
+});
+
+app.delete('/shelf/:bookId', function (request, response) {
+    client.query('DELETE FROM bookbag WHERE book_id=$1',
+        [request.params.bookId]
+    )
+        .then(() => response.send('Delete complete'))
+        .catch(console.error);
 });
 
 function loadDB() {
@@ -59,7 +67,7 @@ function loadDB() {
 loadDB();
 
 app.get('*', (request, response) => {
-    response.sendFile('index.html', {root: './public'});
+    response.sendFile('index.html', { root: './public' });
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));

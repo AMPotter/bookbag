@@ -15,7 +15,13 @@ var app = app || {};
                 Shelf.all = res.data;
                 callback();
             }
-        );
+            );
     };
+    Shelf.deleteRecord = function (bookId, callback) {
+        $.ajax({
+            url: `/shelf/${bookId}`,
+            method: 'DELETE'
+        });
+    }
     module.Shelf = Shelf;
-}(app));
+})(app);
