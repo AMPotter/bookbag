@@ -14,7 +14,6 @@ var app = app || {};
                     Result.loadAll(data);
                     callback();
                 }
-
             );
     };
     Result.loadAll = data => {
@@ -27,9 +26,7 @@ var app = app || {};
     };
 
     Result.insertRecord = function (obj, callback) {
-        console.log(obj);
         $.post('/shelf', obj)
-            .then(console.log)
             .then(callback);
     };
     module.Result = Result;

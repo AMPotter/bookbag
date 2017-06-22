@@ -25,6 +25,7 @@ var app = app || {};
             var bookId = $(this).attr('data-book-id');
             //var arrayPos = app.Shelf.all[index];
             app.Shelf.deleteRecord(bookId);
+            $(this).parent().parent().slideUp();
         });
     };
 
