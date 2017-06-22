@@ -12,6 +12,7 @@ var app = app || {};
 
     shelfView.initPage = function() {
         $('#shelf').show().siblings().hide();
+        app.Shelf.all.forEach(a => $('#shelf').append(render(a)));
     };
 
     module.shelfView = shelfView;

@@ -24,10 +24,6 @@ app.get('/api/results/:titleString', (request, response) => {
         .end((err, res) => response.send(res.text));
 });
 
-function loadBookbag() {
-    
-}
-
 app.post('/shelf', function(request, response) {
     client.query(
         'INSERT INTO bookbag(name, type, teaser, url) VALUES($1, $2, $3, $4) ON CONFLICT DO NOTHING',
@@ -57,7 +53,6 @@ function loadDB() {
             url VARCHAR(255)
         );
     `)
-        .then(loadBookbag)
         .catch(console.error);
 }
 

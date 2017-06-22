@@ -7,6 +7,7 @@ var app = app || {};
 
     searchView.initPage = function() {
         $('#search').show().siblings().hide();
+        $('#no-results').hide();
     };
     
     searchView.initSearch = function() {
@@ -15,6 +16,7 @@ var app = app || {};
 
     searchView.submit = function(event) {
         event.preventDefault();
+        page('/results');
         // replace spaces with plus signs for URL
         const titleStringRaw = $('#search-title').val();
         app.searchView.titleStringRaw = titleStringRaw;
