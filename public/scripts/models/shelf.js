@@ -11,14 +11,11 @@ var app = app || {};
     Shelf.fetchAll = callback => {
         $.get('/data/shelf')
             .then(
-            data => {
-                Shelf.loadAll(data);
+            res => {
+                Shelf.all = res.data;
                 callback();
             }
         );
-    };
-    Shelf.loadAll = data => {
-        Shelf.all = data;
     };
     module.Shelf = Shelf;
 }(app));
