@@ -22,6 +22,9 @@ var app = app || {};
         const dataResults = JSON.parse(data).Similar.Results;
         Result.all = dataResults.filter(ele => ele.Type === 'book').map(obj => new Result(obj));
     };
+    Result.loadShelf = () => {
+        $.get('/shelf');
+    };
 
     Result.insertRecord = function (obj, callback) {
         console.log(obj);
