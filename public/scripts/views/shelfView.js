@@ -12,6 +12,7 @@ var app = app || {};
 
     shelfView.initPage = function() {
         $('#shelf').show().siblings().hide();
+        $.get()
     };
 
     module.shelfView = shelfView;
