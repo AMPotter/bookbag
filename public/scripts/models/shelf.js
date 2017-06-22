@@ -7,16 +7,18 @@ var app = app || {};
         Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
 
     }
-
+    Shelf.all = [];
     Shelf.fetchAll = callback => {
         $.get('/data/shelf')
             .then(
             data => {
-                console.log(data);
-                data.Object.forEach(a => $('#shelf').append(render(a)));
-            callback();
+                Shelf.loadAll(data);
+                callback();
             }
-          );
-};
+        );
+    };
+    Shelf.loadAll = data => {
+        Shelf.all = data;
+    };
     module.Shelf = Shelf;
 }(app));
