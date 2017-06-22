@@ -1,11 +1,19 @@
 body {
    font: 300 100%/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   color: #222;
-   background: #eee;
+   color: #e8eef2;
+   /*background: #d34747;*/
+   /*background: #d34747;*/
+   background: #235084;
 }
 /* responsive images */
 img {
     width: 100%;
     height: auto;
     display: block;
+}
+a {
+    text-decoration: none;
+    /*color: #e8eef2;*/
+    color: #ff8a5b;
+    /*color: #ea526f;*/
 }

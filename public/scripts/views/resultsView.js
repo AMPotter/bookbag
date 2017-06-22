@@ -28,9 +28,10 @@ var app = app || {};
 
     resultsView.initFave = function () {
         $('.save-fave').on('click', function (event) {
-            var index = $(this).parent().parent().index() - 1;
-            
+            var index = $(this).parent().parent().index();
+            console.log(index);
             var arrayPos = app.Result.all[index];
+            console.log(arrayPos);
             var obj = {
                 name: arrayPos.Name,
                 type: arrayPos.Type,

@@ -2,7 +2,7 @@
     max-width: 960px;
     padding: 20px;
     margin: 0 auto;
-    background: #fff;
+    /*background: #fff;*/
 }
 header {
     display: table;
@@ -14,16 +14,21 @@ header {
     vertical-align: top;
 }
 h1 {
-    font-size: 2em;
-    line-height: 1.2;
+    font-size: 2.7em;
+    line-height: 1;
+}
+h1 a {
+    color: #e8eef2;
 }
 #tagline {
     text-transform: uppercase;
+    letter-spacing: .15em;
+    padding-left: 1px;
 }
 #header-right {
     display: table-cell;
     width: 60px;
-    vertical-align: top;
+    vertical-align: middle;
 }
 main {
     margin: 8em 0;
@@ -34,9 +39,21 @@ main {
     float: left;
     margin-right: 15px;
 }
+
 h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+#main-question h2 {
     font-size: 4em;
     line-height: 1.2;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: .2em;
 }
 
 input {
@@ -46,5 +63,12 @@ input {
 
 button {
     font-size: 1.5em;
+    margin-bottom: 2em;
 }
+
+#results p, #shelf p {
+    font-size: 1.2em;
+    margin: 0 2em 2em 2em;
+}
+
 #yes-results, #no-results, #no-shelf {display: none;}
