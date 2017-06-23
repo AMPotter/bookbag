@@ -29,16 +29,13 @@ var app = app || {};
     resultsView.initFave = function () {
         $('.save-fave').on('click', function (event) {
             var index = $(this).parent().parent().index();
-            console.log(index);
             var arrayPos = app.Result.all[index];
-            console.log(arrayPos);
             var obj = {
                 name: arrayPos.Name,
                 type: arrayPos.Type,
                 teaser: arrayPos.wTeaser,
                 url: arrayPos.wUrl
             };
-            console.log('obj = ' + obj);
             app.Result.insertRecord(obj);
         });
     };
