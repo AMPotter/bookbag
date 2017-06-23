@@ -17,7 +17,8 @@
                 <h3><a href="{{wUrl}}" target="_blank">{{Name}}</a></h3>
                 <p>{{wTeaser}}</p>
                 <button type="submit" class="save-fave">Add to shelf</button>
-            </div> <!-- #results-div -->
+            </div>
+            <!-- #results-div -->
         </article>
     </script>
 
@@ -66,27 +67,33 @@
                     <h2>Showing results for</h2>
                 </div>
                 <div id="no-results">
-                    <h2>Nothing found</h2>
+                    <h2>Nothing found.</h2>
                     <p id="no-results-text"></p>
                     <p><a href="/">Search again?</a></p>
-                </div> <!-- #no-results -->
+                </div>
+                <!-- #no-results -->
                 <div id="results-container"></div>
             </section>
             <section class="tab-content" id="shelf">
-                <h2>Books in your shelf</h2>
+                <div id="shelf-header">
+                    <h2>Books on your shelf:</h2>
+                </div>
                 <div id="no-shelf">
-                    <h3>Nothing found</h3>
+                    <h3>Nothing found.</h3>
                     <p>You haven't saved any favorites to your shelf.</p>
                     <p><a href="/">Search for favorites?</a></p>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <p>Created by <a href="https://github.com/anwarmontasir" target="_blank">Anwar Montasir,</a> <a href="https://github.com/AMPotter" target="_blank">Andrew Potter,</a> and <a href="https://github.com/tinytort" target="_blank">Haley Tortorella</a>. ©2017</p>
-        </footer>
     </div>
     <!-- #wrapper -->
+        <footer>
+            <p>Created by <a href="https://github.com/anwarmontasir" target="_blank">Anwar Montasir,</a> <a href="https://github.com/AMPotter"
+                    target="_blank">Andrew Potter,</a> and <a href="https://github.com/tinytort" target="_blank">Haley Tortorella</a>.
+                ©2017
+            </p>
+        </footer>
     <script src="/vendor/scripts/jquery-3.2.1.min.js"></script>
     <script src="/vendor/scripts/handlebars-v4.0.10.js"></script>
     <script src="/vendor/scripts/page.js"></script>

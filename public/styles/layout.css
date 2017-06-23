@@ -2,7 +2,7 @@
     max-width: 960px;
     padding: 20px;
     margin: 0 auto;
-    /*background: #fff;*/
+    min-height: calc(100vh - 70px);
 }
 header {
     display: table;
@@ -57,8 +57,10 @@ h3 {
 }
 
 input {
-    margin-top: 20px;
     font-size: 2em;
+    padding-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -66,9 +68,39 @@ button {
     margin-bottom: 2em;
 }
 
-#results p, #shelf p {
-    font-size: 1.2em;
-    margin: 0 2em 2em 2em;
+#search-form {
+    display: table;
+    margin-top: 20px;
 }
 
-#yes-results, #no-results, #no-shelf {display: none;}
+input, #search-form button {
+    display: table-cell;
+    vertical-align: top;
+}
+
+button {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background: #235084;
+    color: #e8eef2;
+    padding: .4em 1em;
+    border: 3px solid #e8eef2;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: rgba(255,138,91,.8);
+}
+
+#results p, #shelf p {
+    font-size: 1.2em;
+    margin: 0 2em 1em 2em;
+}
+
+footer {
+    text-align: center;
+    height: 20px;
+}
+
+
+#shelf-header, #yes-results, #no-results, #no-shelf {display: none;}
